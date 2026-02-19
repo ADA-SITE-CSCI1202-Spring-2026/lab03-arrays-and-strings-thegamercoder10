@@ -33,6 +33,7 @@ public class StringUtils {
         Scanner sc = new Scanner(System.in);
         String in = sc.nextLine();
 
+        System.out.println(reverse(in));
         System.out.println(explode(in));       
         System.out.println(sort(in)); 
     }
