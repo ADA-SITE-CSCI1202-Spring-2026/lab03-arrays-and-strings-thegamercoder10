@@ -1,7 +1,8 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class ExplodedString {
+public class StringUtils {
 
     public static String explode(String s)
     {
@@ -12,9 +13,19 @@ public class ExplodedString {
         return sb.toString();
     }
 
+    public static String sort(String s)
+    {
+        char sc[] = s.toCharArray();
+        Arrays.sort(sc);
+        return new String(sc);
+    }
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println(explode(sc.nextLine()).toCharArray());       
+        String in = sc.nextLine();
+        
+        System.out.println(explode(in));       
+        System.out.println(sort(in)); 
     }
 }
