@@ -28,13 +28,26 @@ public class StringUtils {
         return new String(sc);
     }
 
+    public static boolean isAnagram(String s1, String s2)
+    {
+        char sc1[] = s1.toCharArray();
+        char sc2[] = s2.toCharArray();
+        Arrays.sort(sc1);
+        Arrays.sort(sc2);
+
+        return Arrays.equals(sc1, sc2);
+    }
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
-        String in = sc.nextLine();
+        String in1 = sc.nextLine();
+        String in2 = sc.nextLine();
 
-        System.out.println(reverse(in));
-        System.out.println(explode(in));       
-        System.out.println(sort(in)); 
+        System.out.println(reverse(in1));
+        System.out.println(explode(in1));       
+        System.out.println(sort(in1)); 
+        System.out.println(isAnagram(in1, in2));
+
     }
 }
